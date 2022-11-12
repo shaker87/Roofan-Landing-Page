@@ -16,7 +16,7 @@ const headerMenu = document.getElementById("header");
 // 	}
 // });
 
-window.onscroll = function() {
+window.onscroll = function () {
 	scrollFunction()
 	// scrollTopFunc()
 }
@@ -24,7 +24,7 @@ window.onscroll = function() {
 // Header Sticky Add
 function scrollFunction() {
 	const sn = document.getElementById("sticky_nav");
-	if (document.body.scrollTop >  200 || document.documentElement.scrollTop > 200) {
+	if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
 		sn.style.background = '#fff'
 		sn.style.position = 'fixed'
 		sn.style.zIndex = "9999"
@@ -68,6 +68,22 @@ function scrollFunction() {
 
 
 $ = jQuery.noConflict();
+
+$(function () {
+	// Owl Carousel
+	var owl = $(".owl-carousel");
+	owl.owlCarousel({
+		items: 4,
+		margin: 20,
+		loop: true,
+		dots: true,
+		nav: true,
+		autoplay: false,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: false,
+	});
+});
+
 
 
 
