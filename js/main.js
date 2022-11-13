@@ -1,20 +1,7 @@
 const headerMenu = document.getElementById("header");
-// const bottomToTopBtn = document.getElementById("bottomToTopBtn");
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
 
-
-
-
-
-
-
-// Change Header Background on Scrolling
-// window.addEventListener("scroll", () => {
-// 	if (this.scrollY >= 85) {
-// 		headerMenu.classList.add("on-scroll");
-// 	} else {
-// 		headerMenu.classList.remove("on-scroll");
-// 	}
-// });
 
 window.onscroll = function () {
 	scrollFunction()
@@ -42,19 +29,30 @@ function scrollFunction() {
 }
 
 
-// function scrollTopFunc() {
-// 	if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-// 		bottomToTopBtn.style.display = "block";
-// 	} else {
-// 		bottomToTopBtn.style.display = "none";
-// 	}
-// }
 
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-// 	document.body.scrollTop = 0;
-// 	document.documentElement.scrollTop = 0;
-// }
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+scrollFunction();
+};
+
+function scrollFunction() {
+if (
+document.body.scrollTop > 20 ||
+document.documentElement.scrollTop > 20
+) {
+mybutton.style.display = "block";
+} else {
+mybutton.style.display = "none";
+}
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
 
 
 
@@ -71,18 +69,57 @@ $ = jQuery.noConflict();
 
 $(function () {
 	// Owl Carousel
-	var owl = $(".owl-carousel");
+	var owl = $(".project-area");
 	owl.owlCarousel({
 		items: 4,
 		margin: 20,
 		loop: true,
 		dots: true,
 		nav: true,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: false,
 	});
 });
+$(function () {
+	// Owl Carousel
+	var owl = $(".testimonial-area");
+	owl.owlCarousel({
+		items: 2,
+		margin: 20,
+		loop: true,
+		dots: true,
+		nav: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: false,
+	});
+});
+
+$(document).ready(function() {
+
+	var counters = $(".count-text");
+	var countersQuantity = counters.length;
+	var counter = [];
+  
+	for (i = 0; i < countersQuantity; i++) {
+	  counter[i] = parseInt(counters[i].innerHTML);
+	}
+  
+	var count = function(start, value, id) {
+	  var localStart = start;
+	  setInterval(function() {
+		if (localStart < value) {
+		  localStart++;
+		  counters[id].innerHTML = localStart + "+";
+		}
+	  }, 40);
+	}
+  
+	for (j = 0; j < countersQuantity; j++) {
+	  count(0, counter[j], j);
+	}
+  });
 
 
 
