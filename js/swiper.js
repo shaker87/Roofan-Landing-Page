@@ -5,13 +5,14 @@ jQuery('.swiper-slide').each( function(index){
 });
 var interleaveOffset = 0.5;
 var swiperOptions = {
-    loop: true,
+    loop: false,
     speed: 1000,
     parallax: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+    dots: false,
     watchSlidesProgress: true,
     pagination: {
         el: '.swiper-pagination',

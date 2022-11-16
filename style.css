@@ -2207,3 +2207,7 @@ p {
 .how-image-container img{
   width: 100%;
 }
+
+.swiper-pagination-bullets{
+  display: none !important;
+}
