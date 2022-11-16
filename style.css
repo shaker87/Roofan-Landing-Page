@@ -2135,3 +2135,75 @@ p {
 .butn span {
   z-index: 20;
 }
+
+
+
+
+.step {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.step .image-container img{
+  width: 100%;
+  padding-right: 25%;
+
+}
+
+.step .copy-container label {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.step .copy-container p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.467;
+}
+.how-it-work-area-title .sec-title{
+  text-align: center !important;
+}
+
+.how-it-work-area-title .sec-title .sub-title {
+  justify-content: center;
+}
+
+.how-it-work-area-title .sec-title .sub-title .border-left {
+  position: relative;
+  display: block;
+  top: 10px;
+  background-color: #d90429;
+  width: 20px;
+  height: 2px;
+}
+.how-it-work-area-title .sec-title .sub-title h5 {
+  color: #d90429;
+  font-size: 19px;
+  margin-top: 20px;
+  line-height: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-left: 10px;
+}
+.how-it-work-area-title .sec-title h2 {
+  color: #111e37;
+  font-size: 24px;
+  line-height: 1.2em;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.how-it-work-area{
+  padding-bottom: 70px;
+}
+
+.how-work-btn{
+  margin-top: 30px;
+}
+.how-image-container img{
+  width: 100%;
+}
