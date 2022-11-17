@@ -6,6 +6,7 @@ jQuery('.swiper-slide').each( function(index){
 var interleaveOffset = 0.5;
 var swiperOptions = {
     loop: false,
+    allowTouchMove: false,
     speed: 1000,
     parallax: true,
     // autoplay: {
